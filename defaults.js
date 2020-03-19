@@ -32,7 +32,8 @@ defaults.header = '# Changelog\n\nAll notable changes to this project will be do
 defaults.packageFiles = [
   'package.json',
   'bower.json',
-  'manifest.json'
+  'manifest.json',
+  'composer.json'
 ]
 
 defaults.bumpFiles = defaults.packageFiles.concat([

@@ -74,12 +74,13 @@ module.exports = function standardVersion (argv) {
       if (_newVersion) newVersion = _newVersion
       return changelog(args, newVersion)
     })
-    .then(() => {
-      return commit(args, newVersion)
-    })
-    .then(() => {
-      return tag(newVersion, pkg ? pkg.private : false, args)
-    })
+    // we do not need for now to commit or tag
+    // .then(() => {
+    //   return commit(args, newVersion)
+    // })
+    // .then(() => {
+    //   return tag(newVersion, pkg ? pkg.private : false, args)
+    // })
     .catch((err) => {
       printError(args, err.message)
       throw err
